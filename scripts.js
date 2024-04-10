@@ -55,7 +55,7 @@ const quotes = [
     "The right man in the wrong place can make all the difference in the world."
 ];
 
-// Function to display cards for each game
+// Displays cards for each game
 function showCards() {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
@@ -68,7 +68,7 @@ function showCards() {
     });
 }
 
-// Function to edit card content with game data
+// Edits card content with game data
 function editCardContent(card, game) {
     card.style.display = "block";
 
@@ -76,7 +76,7 @@ function editCardContent(card, game) {
     cardHeader.textContent = game.title;
 
     const cardImage = card.querySelector("img");
-    // You can use a placeholder image for now, or fetch real cover images from somewhere
+    
     cardImage.src = game.picture; 
     cardImage.alt = game.title + " Cover";
 
@@ -90,7 +90,7 @@ function editCardContent(card, game) {
     platformSpan.textContent = game.platform;
 }
 
-// This calls the addCards() function when the page is first loaded
+
 document.addEventListener("DOMContentLoaded", showCards);
 
 //Selects a random quote within the quotes array
@@ -99,7 +99,7 @@ function getRandomQuote() {
     return quotes[randomIndex];
 }
 
-// Other functions like quoteAlert and removeLastCard remain the same
+
 function quoteAlert() {
     const randomQuote = getRandomQuote();
     console.log("Button Clicked!");
